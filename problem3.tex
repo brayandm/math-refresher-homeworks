@@ -1,0 +1,244 @@
+\textbf{Problem 3:}
+
+\singlespacing
+
+$\textbf{a)}$
+
+\singlespacing
+
+\begin{math}
+    A=\begin{pmatrix}
+        \begin{array}{ccc}
+            2 & 3 & 4 \\
+            3 & 4 & 5 \\
+            4 & 5 & 6
+        \end{array}
+    \end{pmatrix}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    det(A) = 2*4*6 + 3*5*4 + 4*3*5 - 4*4*4 - 3*3*6 - 2*5*5 = 0
+\end{math}
+
+\singlespacing
+
+So the matrix is singular and it is not invertible.
+
+\singlespacing
+
+\singlespacing
+
+$\textbf{b)}$
+
+\singlespacing
+
+\begin{math}
+    A = \begin{pmatrix}
+        \begin{array}{cccc}
+            1 & 0 & 1 & 0 \\
+            0 & 1 & 1 & 0 \\
+            1 & 1 & 0 & 1 \\
+            1 & 1 & 1 & 0
+        \end{array}
+    \end{pmatrix}
+\end{math}
+
+\singlespacing
+
+Aplying the Gauss-Jordan elimination method:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
+            0 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
+            1 & 1 & 0 & 1 & 0 & 0 & 1 & 0 \\
+            1 & 1 & 1 & 0 & 0 & 0 & 0 & 1
+        \end{array}
+    \end{pmatrix}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1  & 0 & 1  & 0 & 0 & 0 \\
+            0 & 1 & 1  & 0 & 0  & 1 & 0 & 0 \\
+            0 & 1 & -1 & 1 & -1 & 0 & 1 & 0 \\
+            1 & 1 & 1  & 0 & 0  & 0 & 0 & 1
+        \end{array}
+    \end{pmatrix}
+    r3 = r3  + (-r1)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1  & 0 & 1  & 0 & 0 & 0 \\
+            0 & 1 & 1  & 0 & 0  & 1 & 0 & 0 \\
+            0 & 1 & -1 & 1 & -1 & 0 & 1 & 0 \\
+            0 & 1 & 0  & 0 & -1 & 0 & 0 & 1
+        \end{array}
+    \end{pmatrix}
+    r4 = r4  + (-r1)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1  & 0 & 1  & 0  & 0 & 0 \\
+            0 & 1 & 1  & 0 & 0  & 1  & 0 & 0 \\
+            0 & 0 & -2 & 1 & -1 & -1 & 1 & 0 \\
+            0 & 1 & 0  & 0 & -1 & 0  & 0 & 1
+        \end{array}
+    \end{pmatrix}
+    r3 = r3  + (-r2)
+\end{math}
+
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1  & 0 & 1  & 0  & 0 & 0 \\
+            0 & 1 & 1  & 0 & 0  & 1  & 0 & 0 \\
+            0 & 0 & -2 & 1 & -1 & -1 & 1 & 0 \\
+            0 & 0 & -1 & 0 & -1 & -1 & 0 & 1
+        \end{array}
+    \end{pmatrix}
+    r4 = r4  + (-r2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 1  & 0    & 1   & 0   & 0    & 0 \\
+            0 & 1 & 1  & 0    & 0   & 1   & 0    & 0 \\
+            0 & 0 & 1  & -1/2 & 1/2 & 1/2 & -1/2 & 0 \\
+            0 & 0 & -1 & 0    & -1  & -1  & 0    & 1
+        \end{array}
+    \end{pmatrix}
+    r3 = r3 / (-2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0  & 1/2  & 1/2 & -1/2 & 1/2  & 0 \\
+            0 & 1 & 1  & 0    & 0   & 1    & 0    & 0 \\
+            0 & 0 & 1  & -1/2 & 1/2 & 1/2  & -1/2 & 0 \\
+            0 & 0 & -1 & 0    & -1  & -1   & 0    & 1
+        \end{array}
+    \end{pmatrix}
+    r1 = r1 + (-f3)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0  & 1/2  & 1/2  & -1/2 & 1/2  & 0 \\
+            0 & 1 & 0  & 1/2  & -1/2 & 1/2  & 1/2  & 0 \\
+            0 & 0 & 1  & -1/2 & 1/2  & 1/2  & -1/2 & 0 \\
+            0 & 0 & -1 & 0    & -1   & -1   & 0    & 1
+        \end{array}
+    \end{pmatrix}
+    r2 = r3 + (-f3)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 1/2  & 1/2  & -1/2 & 1/2  & 0 \\
+            0 & 1 & 0 & 1/2  & -1/2 & 1/2  & 1/2  & 0 \\
+            0 & 0 & 1 & -1/2 & 1/2  & 1/2  & -1/2 & 0 \\
+            0 & 0 & 0 & -1/2 & -1/2 & -1/2 & -1/2 & 1
+        \end{array}
+    \end{pmatrix}
+    r4 = r4 + f3
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 1/2  & 1/2  & -1/2 & 1/2  & 0  \\
+            0 & 1 & 0 & 1/2  & -1/2 & 1/2  & 1/2  & 0  \\
+            0 & 0 & 1 & -1/2 & 1/2  & 1/2  & -1/2 & 0  \\
+            0 & 0 & 0 & 1    & 1    & 1    & 1    & -2
+        \end{array}
+    \end{pmatrix}
+    r4 = r4 * (-2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 1/2 & 1/2  & -1/2 & 1/2 & 0  \\
+            0 & 1 & 0 & 1/2 & -1/2 & 1/2  & 1/2 & 0  \\
+            0 & 0 & 1 & 0   & 1    & 1    & 0   & -1 \\
+            0 & 0 & 0 & 1   & 1    & 1    & 1   & -2
+        \end{array}
+    \end{pmatrix}
+    r3 = r3 + (r4/2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 1/2 & 1/2 & -1/2 & 1/2 & 0  \\
+            0 & 1 & 0 & 0   & -1  & 0    & 0   & 1  \\
+            0 & 0 & 1 & 0   & 1   & 1    & 0   & -1 \\
+            0 & 0 & 0 & 1   & 1   & 1    & 1   & -2
+        \end{array}
+    \end{pmatrix}
+    r2 = r2 + (-r4/2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{cccc|cccc}
+            1 & 0 & 0 & 0 & 0  & -1 & 0 & 1  \\
+            0 & 1 & 0 & 0 & -1 & 0  & 0 & 1  \\
+            0 & 0 & 1 & 0 & 1  & 1  & 0 & -1 \\
+            0 & 0 & 0 & 1 & 1  & 1  & 1 & -2
+        \end{array}
+    \end{pmatrix}
+    r1 = r1 + (-r4/2)
+\end{math}
+
+\singlespacing
+
+So the $A^{-1} = \begin{pmatrix}
+        \begin{array}{cccc}
+            0  & -1 & 0 & 1  \\
+            -1 & 0  & 0 & 1  \\
+            1  & 1  & 0 & -1 \\
+            1  & 1  & 1 & -2
+        \end{array}
+    \end{pmatrix}$

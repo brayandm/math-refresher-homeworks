@@ -1,0 +1,237 @@
+\textbf{Problem 1:}
+
+\singlespacing
+
+\begin{math}
+    A = \begin{pmatrix}
+        \begin{array}{ccc}
+            6 & 4 & 3 \\
+            6 & 0 & 9 \\
+            0 & 8 & 0
+        \end{array}
+    \end{pmatrix},\quad
+    \sum_{i=1}^{3}{x_i} = 1
+\end{math}
+
+\singlespacing
+\singlespacing
+
+$Ax = 12x$
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc}
+            6 & 4 & 3 \\
+            6 & 0 & 9 \\
+            0 & 8 & 0
+        \end{array}
+    \end{pmatrix}
+    \begin{pmatrix}
+        \begin{array}{c}
+            x_1 \\
+            x_2 \\
+            x_3
+        \end{array}
+    \end{pmatrix} = 12
+    \begin{pmatrix}
+        \begin{array}{c}
+            x_1 \\
+            x_2 \\
+            x_3
+        \end{array}
+    \end{pmatrix}
+\end{math}
+
+\singlespacing
+\singlespacing
+Extracting equations:
+\singlespacing
+$6x_1 + 4x_2 + 3x_3 = 12x_1$
+\singlespacing
+$6x_1 + 9x_3 = 12x_2$
+\singlespacing
+$8x_2 = 12x_3$
+\singlespacing
+\singlespacing
+Plus the constraint:
+\singlespacing
+$x_1 + x_2 + x_3 = 1$
+\singlespacing
+\singlespacing
+Rewriting the equations:
+\singlespacing
+
+$-6x_1 + 4x_2 + 3x_3 = 0$
+\singlespacing
+
+$6x_1 - 12x_2 + 9x_3 = 0$
+\singlespacing
+
+$8x_2 - 12x_3 = 0$
+\singlespacing
+
+$x_1 + x_2 + x_3 = 1$
+
+\singlespacing
+\singlespacing
+Solving the system:
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            -6 & 4   & 3   & 0 \\
+            6  & -12 & 9   & 0 \\
+            0  & 8   & -12 & 0 \\
+            1  & 1   & 1   & 1
+        \end{array}
+    \end{pmatrix}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            -6 & 4  & 3   & 0 \\
+            0  & -8 & 12  & 0 \\
+            0  & 8  & -12 & 0 \\
+            1  & 1  & 1   & 1
+        \end{array}
+    \end{pmatrix}\quad
+    r2 = r2  + r1
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            0 & 10 & 9   & 6 \\
+            0 & -8 & 12  & 0 \\
+            0 & 8  & -12 & 0 \\
+            1 & 1  & 1   & 1
+        \end{array}
+    \end{pmatrix}\quad
+    r1 = r1  + r4*6
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1   & 1 \\
+            0 & -8 & 12  & 0 \\
+            0 & 8  & -12 & 0 \\
+            0 & 10 & 9   & 6
+        \end{array}
+    \end{pmatrix}\quad
+    \begin{array}{c}
+        swap(r1, r4)
+    \end{array}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 1 \\
+            0 & -8 & 12 & 0 \\
+            0 & 0  & 0  & 0 \\
+            0 & 10 & 9  & 6
+        \end{array}
+    \end{pmatrix}\quad
+    \begin{array}{c}
+        r3 = r3  + r2
+    \end{array}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 1 \\
+            0 & -8 & 12 & 0 \\
+            0 & 10 & 9  & 6 \\
+            0 & 0  & 0  & 0
+        \end{array}
+    \end{pmatrix}\quad
+    \begin{array}{c}
+        swap(r3, r4)
+    \end{array}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{pmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 1 \\
+            0 & -8 & 12 & 0 \\
+            0 & 0  & 24 & 6 \\
+            0 & 0  & 0  & 0
+        \end{array}
+    \end{pmatrix}\quad
+    \begin{array}{c}
+        r3 = r3 + \frac{5}{4}r2
+    \end{array}
+\end{math}
+
+\singlespacing
+
+Extracting equations:
+
+\singlespacing
+
+$x_1 + x_2 + x_3 = 1$
+
+\singlespacing
+
+$-8x_2 + 12x_3 = 0$
+
+\singlespacing
+
+$24x_3 = 6$
+
+\singlespacing
+
+Solving equations:
+
+\singlespacing
+
+$x_3 = \frac{1}{4}$
+
+\singlespacing
+
+$x_2 = \frac{12x_3}{8} = \frac{12\frac{1}{4}}{8} = \frac{3}{8}$
+
+\singlespacing
+
+$x_1 = 1 - x_2 - x_3 = 1 - \frac{3}{8} - \frac{1}{4} = \frac{3}{8}$
+
+\singlespacing
+
+So the solution is:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.5}
+    \begin{math}
+        x = \begin{pmatrix}
+            \begin{array}{c}
+                \frac{3}{8} \\
+                \frac{3}{8} \\
+                \frac{1}{4}
+            \end{array}
+        \end{pmatrix}\quad
+        \begin{array}{c}
+        \end{array}
+    \end{math}
+}
