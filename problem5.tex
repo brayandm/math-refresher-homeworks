@@ -168,3 +168,313 @@ So the dimensions of $U_1$ and $U_2$ are:
 \end{math}
 
 \singlespacing
+\singlespacing
+\singlespacing
+
+Let's find the basis of $U_1 \cap U_2$:
+
+\singlespacing
+
+The set of vectors that are in $U_1$ are:
+
+\singlespacing
+
+\begin{math}
+    S=\left\{
+    a\begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            1 \\
+            2 \\
+            1
+        \end{array}
+    \end{bmatrix}+
+    b\begin{bmatrix}
+        \begin{array}{c}
+            0  \\
+            -2 \\
+            1  \\
+            0
+        \end{array}
+    \end{bmatrix},\quad a,b \in \mathbb{R}\right\}
+\end{math}
+
+\singlespacing
+
+Then:
+
+\singlespacing
+
+\begin{math}
+    S=\left\{
+    \begin{bmatrix}
+        \begin{array}{c}
+            a    \\
+            a-2b \\
+            2a+b \\
+            a
+        \end{array}
+    \end{bmatrix},\quad a,b \in \mathbb{R}\right\}
+\end{math}
+
+\singlespacing
+
+The set of vectors that are in $U_2$ are:
+
+\singlespacing
+
+\begin{math}
+    T=\left\{
+    c\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}+
+    d\begin{bmatrix}
+        \begin{array}{c}
+            -3 \\
+            2  \\
+            -5 \\
+            -1
+        \end{array}
+    \end{bmatrix},\quad c,d \in \mathbb{R}\right\}
+\end{math}
+
+\singlespacing
+
+Then:
+
+\singlespacing
+
+\begin{math}
+    T=\left\{
+    \begin{bmatrix}
+        \begin{array}{c}
+            3c-3d \\
+            c+2d  \\
+            7c-5d \\
+            3c-d
+        \end{array}
+    \end{bmatrix},\quad c,d \in \mathbb{R}\right\}
+\end{math}
+
+\singlespacing
+\singlespacing
+
+Now we will find the vectors in $S$ that are also in $T$:
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{c}
+            a    \\
+            a-2b \\
+            2a+b \\
+            a
+        \end{array}
+    \end{bmatrix}
+    =
+    \begin{bmatrix}
+        \begin{array}{c}
+            3c-3d \\
+            c+2d  \\
+            7c-5d \\
+            3c-d
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+
+Then:
+
+\singlespacing
+
+\begin{math}
+    \begin{cases}
+        \begin{array}{cc}
+            a=3c-3d    & (\rom{1}) \\
+            a-2b=c+2d  & (\rom{2}) \\
+            2a+b=7c-5d & (\rom{3}) \\
+            a=3c-d     & (\rom{4})
+        \end{array}
+    \end{cases}
+\end{math}
+
+\singlespacing
+
+We get that:
+
+\singlespacing
+
+$a = 3c-3d$ and $a = 3c-d$, then $3c-3d = 3c-d$, then $-3d = -d$, then $d = 0$.
+
+\singlespacing
+
+Replacing $d$ in equations:
+
+\singlespacing
+
+\begin{math}
+    \begin{cases}
+        \begin{array}{cc}
+            a=3c-3(0)    & (\rom{1}) \\
+            a-2b=c+2(0)  & (\rom{2}) \\
+            2a+b=7c-5(0) & (\rom{3}) \\
+            a=3c-(0)     & (\rom{4})
+        \end{array}
+    \end{cases}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{cases}
+        \begin{array}{cc}
+            a=3c    & (\rom{1}) \\
+            a-2b=c  & (\rom{2}) \\
+            2a+b=7c & (\rom{3}) \\
+            a=3c    & (\rom{4})
+        \end{array}
+    \end{cases}
+\end{math}
+
+\singlespacing
+
+Here we get that $a=3c$, so replacing equations $(\rom{2})$ and $(\rom{3})$;
+
+\singlespacing
+
+\begin{math}
+    \begin{cases}
+        \begin{array}{cc}
+            3c-2b=c & (\rom{2}) \\
+            6c+b=7c & (\rom{3})
+        \end{array}
+    \end{cases}
+\end{math}
+
+\singlespacing
+
+multiplying $(\rom{1})$ by $-2$ and adding it to $(\rom{2})$ we get:
+
+\singlespacing
+
+$3c-2b=c$
+
+$6c+b=7c$
+
+\singlespacing
+
+$-6c+4b=-2c \quad\cdot(-2)$
+
+$6c+b=7c$
+
+\singlespacing
+
+And adding them we get:
+
+\singlespacing
+
+$5b=5c$
+
+\singlespacing
+
+Then $b=c$, so we get that $a=3c$, $b=c$ and $d=0$.
+
+\singlespacing
+
+So because $c$ is a free variable, and $d=0$, substituting the following:
+
+\singlespacing
+
+\begin{math}
+    T=\left\{
+    c\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}+
+    d\begin{bmatrix}
+        \begin{array}{c}
+            -3 \\
+            2  \\
+            -5 \\
+            -1
+        \end{array}
+    \end{bmatrix},\quad c,d \in \mathbb{R}\right\}
+\end{math}
+
+
+\singlespacing
+
+\begin{math}
+    c\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}+
+    d\begin{bmatrix}
+        \begin{array}{c}
+            -3 \\
+            2  \\
+            -5 \\
+            -1
+        \end{array}
+    \end{bmatrix}=
+    c\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}+
+    0\begin{bmatrix}
+        \begin{array}{c}
+            -3 \\
+            2  \\
+            -5 \\
+            -1
+        \end{array}
+    \end{bmatrix}=
+    c\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+\singlespacing
+\singlespacing
+
+Then we have that $c$ is a free variable (scalar), so the basis of $U_1 \cap U_2$ is:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    B_1 \cap B_2 = \left<\begin{bmatrix}
+        \begin{array}{c}
+            3 \\
+            1 \\
+            7 \\
+            3
+        \end{array}
+    \end{bmatrix}\right>
+\end{math}
+
