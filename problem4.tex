@@ -9,9 +9,395 @@ $\textbf{a)}$
 \begin{math}
     x_1 = \begin{bmatrix}
         \begin{array}{c}
+            2  \\
+            -1 \\
+            3
+        \end{array}
+    \end{bmatrix},\quad
+    x_1 = \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            1 \\
+            2
+        \end{array}
+    \end{bmatrix},\quad
+    x_1 = \begin{bmatrix}
+        \begin{array}{c}
+            3  \\
+            -3 \\
+            8
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+\singlespacing
+
+A set of vectors are linearly independent if the only solution to the equation:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    a \begin{bmatrix}
+        \begin{array}{c}
+            2  \\
+            -1 \\
+            3
+        \end{array}
+    \end{bmatrix}
+    +b \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            1 \\
+            2
+        \end{array}
+    \end{bmatrix}
+    +c \begin{bmatrix}
+        \begin{array}{c}
+            3  \\
+            -3 \\
+            8
+        \end{array}
+    \end{bmatrix}
+    = 0
+\end{math}
+
+\singlespacing
+\singlespacing
+
+are $a = b = c = 0$.
+
+\singlespacing
+
+So let us solve the equation:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            2  & 1 & 3  & 0 \\
+            -1 & 1 & -3 & 0 \\
+            3  & 2 & 8  & 0
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            0  & 3 & -3 & 0 \\
+            -1 & 1 & -3 & 0 \\
+            3  & 2 & 8  & 0
+        \end{array}
+    \end{bmatrix}r_1 = r_1 + 2r_2
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            0  & 3 & -3 & 0 \\
+            -1 & 1 & -3 & 0 \\
+            0  & 5 & -1 & 0
+        \end{array}
+    \end{bmatrix}r_3 = r_3 + 3r_2
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            -1 & 1 & -3 & 0 \\
+            0  & 3 & -3 & 0 \\
+            0  & 5 & -1 & 0
+        \end{array}
+    \end{bmatrix}swap(r_1, r_2)
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            -1 & 1 & -3 & 0 \\
+            0  & 3 & -3 & 0 \\
+            0  & 0 & 4  & 0
+        \end{array}
+    \end{bmatrix}r_3 = r_3 + -\frac{5}{3}r_2
+\end{math}
+
+\singlespacing
+\singlespacing
+So extracting the new equations we get:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    -x_1 + x_2 - 3x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    3x_2 - 3x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    4x_3 = 0
+\end{math}
+
+\singlespacing
+\singlespacing
+Finding the solution to the system of equations we get:
+
+\singlespacing
+
+$4x_3 = 0$
+
+$x_3 = 0$
+
+\singlespacing
+
+$3x_2 - 3(0) = 0$
+
+$3x_2 = 0$
+
+$x_2 = 0$
+
+\singlespacing
+
+$-x_1 + 0 - 3(0) = 0$
+
+$-x_1 = 0$
+
+$x_1 = 0$
+
+\singlespacing
+
+So the only solution to the equation is $x_1 = x_2 = x_3 = 0$. And then the set of vectors are linearly independent.
+
+\singlespacing
+\singlespacing
+$\textbf{b)}$
+
+\singlespacing
+
+\begin{math}
+    x_1 = \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            2 \\
+            1 \\
+            0 \\
+            0
+        \end{array}
+    \end{bmatrix},\quad
+    x_1 = \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            1 \\
+            0 \\
+            1 \\
+            1
+        \end{array}
+    \end{bmatrix},\quad
+    x_1 = \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            0 \\
+            0 \\
+            1 \\
+            1
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+\singlespacing
+
+A set of vectors are linearly independent if the only solution to the equation:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    a \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            2 \\
             1 \\
             0 \\
             0
         \end{array}
     \end{bmatrix}
+    +b \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            1 \\
+            0 \\
+            1 \\
+            1
+        \end{array}
+    \end{bmatrix}
+    +c \begin{bmatrix}
+        \begin{array}{c}
+            1 \\
+            0 \\
+            0 \\
+            1 \\
+            1
+        \end{array}
+    \end{bmatrix}
+    = 0
 \end{math}
+
+\singlespacing
+\singlespacing
+
+are $a = b = c = 0$.
+
+\singlespacing
+
+So let us solve the equation:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            1 & 1 & 1 & 0 \\
+            2 & 1 & 0 & 0 \\
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 1 & 0 \\
+            0 & 1 & 1 & 0 \\
+        \end{array}
+    \end{bmatrix}
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 0 \\
+            0 & -1 & -2 & 0 \\
+            1 & 0  & 0  & 0 \\
+            0 & 1  & 1  & 0 \\
+            0 & 1  & 1  & 0 \\
+        \end{array}
+    \end{bmatrix}r_2 = r_2 + -2r_1
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 0 \\
+            0 & -1 & -2 & 0 \\
+            0 & -1 & -1 & 0 \\
+            0 & 1  & 1  & 0 \\
+            0 & 1  & 1  & 0 \\
+        \end{array}
+    \end{bmatrix}r_3 = r_3 + -r_1
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 0 \\
+            0 & -1 & -2 & 0 \\
+            0 & 0  & 1  & 0 \\
+            0 & 1  & 1  & 0 \\
+            0 & 1  & 1  & 0 \\
+        \end{array}
+    \end{bmatrix}r_3 = r_3 + -r_2
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    \begin{bmatrix}
+        \begin{array}{ccc|c}
+            1 & 1  & 1  & 0 \\
+            0 & -1 & -2 & 0 \\
+            0 & 0  & 1  & 0 \\
+            0 & 0  & -1 & 0 \\
+            0 & 0  & -1 & 0 \\
+        \end{array}
+    \end{bmatrix}r_4 = r_4 + r_2
+\end{math}
+
+\singlespacing
+\singlespacing
+So extracting the new equations we get:
+
+\singlespacing
+\singlespacing
+
+\begin{math}
+    x_1 + x_2 + x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    -x_2 - 2x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    -x_3 = 0
+\end{math}
+
+\singlespacing
+
+\begin{math}
+    -x_3 = 0
+\end{math}
+
+\singlespacing
+
+Finding the solution to the system of equations we get:
+
+\singlespacing
+
+$x_3 = 0$
+
+\singlespacing
+
+$-x_2 - 2(0) = 0$
+
+$-x_2 = 0$
+
+$x_2 = 0$
+
+\singlespacing
+
+$x_1 + 0 + 0 = 0$
+
+$x_1 = 0$
+
+\singlespacing
+
+So the only solution to the equation is $x_1 = x_2 = x_3 = 0$. And then the set of vectors are linearly independent.
