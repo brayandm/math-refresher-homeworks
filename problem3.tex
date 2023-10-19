@@ -7,13 +7,13 @@ $\textbf{a)}$
 \singlespacing
 
 \begin{math}
-    A=\begin{pmatrix}
+    A=\begin{bmatrix}
         \begin{array}{ccc}
             2 & 3 & 4 \\
             3 & 4 & 5 \\
             4 & 5 & 6
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
 \end{math}
 
 \singlespacing
@@ -35,14 +35,14 @@ $\textbf{b)}$
 \singlespacing
 
 \begin{math}
-    A = \begin{pmatrix}
+    A = \begin{bmatrix}
         \begin{array}{cccc}
             1 & 0 & 1 & 0 \\
             0 & 1 & 1 & 0 \\
             1 & 1 & 0 & 1 \\
             1 & 1 & 1 & 0
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
 \end{math}
 
 \singlespacing
@@ -53,55 +53,55 @@ Aplying the Gauss-Jordan elimination method:
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1 & 0 & 1 & 0 & 0 & 0 \\
             0 & 1 & 1 & 0 & 0 & 1 & 0 & 0 \\
             1 & 1 & 0 & 1 & 0 & 0 & 1 & 0 \\
             1 & 1 & 1 & 0 & 0 & 0 & 0 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1  & 0 & 1  & 0 & 0 & 0 \\
             0 & 1 & 1  & 0 & 0  & 1 & 0 & 0 \\
             0 & 1 & -1 & 1 & -1 & 0 & 1 & 0 \\
             1 & 1 & 1  & 0 & 0  & 0 & 0 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r3 = r3  + (-r1)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1  & 0 & 1  & 0 & 0 & 0 \\
             0 & 1 & 1  & 0 & 0  & 1 & 0 & 0 \\
             0 & 1 & -1 & 1 & -1 & 0 & 1 & 0 \\
             0 & 1 & 0  & 0 & -1 & 0 & 0 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r4 = r4  + (-r1)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1  & 0 & 1  & 0  & 0 & 0 \\
             0 & 1 & 1  & 0 & 0  & 1  & 0 & 0 \\
             0 & 0 & -2 & 1 & -1 & -1 & 1 & 0 \\
             0 & 1 & 0  & 0 & -1 & 0  & 0 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r3 = r3  + (-r2)
 \end{math}
 
@@ -109,136 +109,136 @@ Aplying the Gauss-Jordan elimination method:
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1  & 0 & 1  & 0  & 0 & 0 \\
             0 & 1 & 1  & 0 & 0  & 1  & 0 & 0 \\
             0 & 0 & -2 & 1 & -1 & -1 & 1 & 0 \\
             0 & 0 & -1 & 0 & -1 & -1 & 0 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r4 = r4  + (-r2)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 1  & 0    & 1   & 0   & 0    & 0 \\
             0 & 1 & 1  & 0    & 0   & 1   & 0    & 0 \\
             0 & 0 & 1  & -1/2 & 1/2 & 1/2 & -1/2 & 0 \\
             0 & 0 & -1 & 0    & -1  & -1  & 0    & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r3 = r3 / (-2)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0  & 1/2  & 1/2 & -1/2 & 1/2  & 0 \\
             0 & 1 & 1  & 0    & 0   & 1    & 0    & 0 \\
             0 & 0 & 1  & -1/2 & 1/2 & 1/2  & -1/2 & 0 \\
             0 & 0 & -1 & 0    & -1  & -1   & 0    & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r1 = r1 + (-f3)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0  & 1/2  & 1/2  & -1/2 & 1/2  & 0 \\
             0 & 1 & 0  & 1/2  & -1/2 & 1/2  & 1/2  & 0 \\
             0 & 0 & 1  & -1/2 & 1/2  & 1/2  & -1/2 & 0 \\
             0 & 0 & -1 & 0    & -1   & -1   & 0    & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r2 = r3 + (-f3)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0 & 1/2  & 1/2  & -1/2 & 1/2  & 0 \\
             0 & 1 & 0 & 1/2  & -1/2 & 1/2  & 1/2  & 0 \\
             0 & 0 & 1 & -1/2 & 1/2  & 1/2  & -1/2 & 0 \\
             0 & 0 & 0 & -1/2 & -1/2 & -1/2 & -1/2 & 1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r4 = r4 + f3
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0 & 1/2  & 1/2  & -1/2 & 1/2  & 0  \\
             0 & 1 & 0 & 1/2  & -1/2 & 1/2  & 1/2  & 0  \\
             0 & 0 & 1 & -1/2 & 1/2  & 1/2  & -1/2 & 0  \\
             0 & 0 & 0 & 1    & 1    & 1    & 1    & -2
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r4 = r4 * (-2)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0 & 1/2 & 1/2  & -1/2 & 1/2 & 0  \\
             0 & 1 & 0 & 1/2 & -1/2 & 1/2  & 1/2 & 0  \\
             0 & 0 & 1 & 0   & 1    & 1    & 0   & -1 \\
             0 & 0 & 0 & 1   & 1    & 1    & 1   & -2
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r3 = r3 + (r4/2)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0 & 1/2 & 1/2 & -1/2 & 1/2 & 0  \\
             0 & 1 & 0 & 0   & -1  & 0    & 0   & 1  \\
             0 & 0 & 1 & 0   & 1   & 1    & 0   & -1 \\
             0 & 0 & 0 & 1   & 1   & 1    & 1   & -2
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r2 = r2 + (-r4/2)
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccc|cccc}
             1 & 0 & 0 & 0 & 0  & -1 & 0 & 1  \\
             0 & 1 & 0 & 0 & -1 & 0  & 0 & 1  \\
             0 & 0 & 1 & 0 & 1  & 1  & 0 & -1 \\
             0 & 0 & 0 & 1 & 1  & 1  & 1 & -2
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
     r1 = r1 + (-r4/2)
 \end{math}
 
 \singlespacing
 
-So the $A^{-1} = \begin{pmatrix}
+So the $A^{-1} = \begin{bmatrix}
         \begin{array}{cccc}
             0  & -1 & 0 & 1  \\
             -1 & 0  & 0 & 1  \\
             1  & 1  & 0 & -1 \\
             1  & 1  & 1 & -2
         \end{array}
-    \end{pmatrix}$
+    \end{bmatrix}$

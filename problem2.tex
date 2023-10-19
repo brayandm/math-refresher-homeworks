@@ -3,20 +3,20 @@
 \singlespacing
 
 \begin{math}
-    A=\begin{pmatrix}
+    A=\begin{bmatrix}
         \begin{array}{cccccc}
             0 & 1 & 0 & 0 & 1 & 0 \\
             0 & 0 & 0 & 1 & 1 & 0 \\
             0 & 1 & 0 & 0 & 0 & 1
         \end{array}
-    \end{pmatrix}\quad
-    b=\begin{pmatrix}
+    \end{bmatrix}\quad
+    b=\begin{bmatrix}
         \begin{array}{cccccc}
             2  \\
             -1 \\
             1
         \end{array}
-    \end{pmatrix}
+    \end{bmatrix}
 \end{math}
 
 \singlespacing
@@ -26,25 +26,25 @@ Solving the system:
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccccc|c}
             0 & 1 & 0 & 0 & 1 & 0 & 2  \\
             0 & 0 & 0 & 1 & 1 & 0 & -1 \\
             0 & 1 & 0 & 0 & 0 & 1 & 1
         \end{array}
-    \end{pmatrix}\quad
+    \end{bmatrix}\quad
 \end{math}
 
 \singlespacing
 
 \begin{math}
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{cccccc|c}
             0 & 1 & 0 & 0 & 1  & 0 & 2  \\
             0 & 0 & 0 & 1 & 1  & 0 & -1 \\
             0 & 0 & 0 & 0 & -1 & 1 & -1
         \end{array}
-    \end{pmatrix}\quad
+    \end{bmatrix}\quad
     r3 = r3  + (-r1)
 \end{math}
 
@@ -55,7 +55,7 @@ solve for the dependent variables $x_2$, $x_4$, and $x_5$:
 
 \singlespacing
 
-Extra equations:
+Extract equations:
 
 \singlespacing
 
@@ -107,7 +107,7 @@ So the solution is:
 
 \begin{math}
     S = \left\{
-    \begin{pmatrix}
+    \begin{bmatrix}
         \begin{array}{c}
             a      \\
             1 - c  \\
@@ -116,7 +116,7 @@ So the solution is:
             c + 1  \\
             c
         \end{array}
-    \end{pmatrix},\quad
+    \end{bmatrix},\quad
     \forall a, b, c \in \mathbb{R}
     \right\}
 \end{math}
