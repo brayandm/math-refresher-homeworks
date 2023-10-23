@@ -1,1 +1,59 @@
 \textbf{Problem 6:}
+
+\singlespacing
+
+$\textbf{a)}$
+
+\singlespacing
+
+$\int \frac{e^{\sqrt{x}}}{\sqrt{x}}dx$
+
+\singlespacing
+
+We multiply the integral by $\frac{2}{2}$
+
+\singlespacing
+
+$\frac{2}{2}\int \frac{e^{\sqrt{x}}}{\sqrt{x}}dx$
+
+\singlespacing
+
+Because the linearity of the integral we can insert the constant inside the integral
+
+\singlespacing
+
+$2\cdot\int \frac{e^{\sqrt{x}}}{2\sqrt{x}}dx$
+
+\singlespacing
+
+Let's make some transformation
+
+\singlespacing
+
+$2\cdot\int e^{\sqrt{x}}\cdot \frac{1}{2\sqrt{x}}dx$
+
+\singlespacing
+
+Now let's apply the property $\int e^u \cdot u'dx  = e^u + C$
+
+\singlespacing
+
+And because $(x^n)' = nx^{n-1}$, then $\sqrt{x}' = (x^\frac{1}{2})' =
+    \frac{1}{2}x^{(\frac{1}{2}-1)}  = \frac{1}{2}x^{(-\frac{1}{2})}= \frac{1}{2\cdot x^\frac{1}{2}}
+    = \frac{1}{2\cdot \sqrt{x}}$
+
+\singlespacing
+
+Then $u = \sqrt{x}$ and $u' = \frac{1}{2\cdot \sqrt{x}}$, so:
+
+\singlespacing
+
+$2\cdot\int e^{\sqrt{x}}\cdot \frac{1}{2\sqrt{x}}dx = 2\cdot e^{\sqrt{x}} + C$
+
+\singlespacing
+
+% $\textbf{b)}$
+
+% \singlespacing
+
+% $\int x\sin{(x) }dx$
