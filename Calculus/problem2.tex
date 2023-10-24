@@ -1,3 +1,83 @@
 \textbf{Problem 2:}
 
 \singlespacing
+
+$f(x) = x^Tx,\quad x \in \mathbb{R}^N$
+
+\singlespacing
+
+Then we have to calculate $\frac{\partial f(x)}{\partial x}$
+
+\singlespacing
+
+Because $f(x)$ is a scalar and $x$ is a vector then $\frac{\partial f(x)}{\partial x}$
+can be written as the following vector:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.8}
+    $\frac{\partial f(x)}{\partial x} = \begin{bmatrix}
+            \frac{\partial f(x)}{\partial x_1} \\
+            \frac{\partial f(x)}{\partial x_2} \\
+            \vdots                             \\
+            \frac{\partial f(x)}{\partial x_N}
+        \end{bmatrix}$
+}
+
+\singlespacing
+
+Now we can calculate each partial derivative:
+
+\singlespacing
+
+We can notice that $f(x) = x^Tx = \sum_{i=1}^{N}x_i^2$
+
+\singlespacing
+
+Then $\frac{\partial f(x)}{\partial x_i} = \frac{\partial \sum_{i=1}^{N}x_i^2}{\partial x_i} = 2x_i$
+
+\singlespacing
+
+Because all $x_j$ with $j \neq i$ are constants and when
+$i = j$ then $\frac{\partial x_i^2}{\partial x_i} = 2x_i$
+
+\singlespacing
+
+Replacing the vector notation:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.8}
+    $\frac{\partial f(x)}{\partial x} = \begin{bmatrix}
+            2x_1   \\
+            2x_2   \\
+            \vdots \\
+            2x_N
+        \end{bmatrix}$
+}
+
+\singlespacing
+
+Extracting the 2:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.8}
+    $\frac{\partial f(x)}{\partial x} = 2\begin{bmatrix}
+            x_1    \\
+            x_2    \\
+            \vdots \\
+            x_N
+        \end{bmatrix}$
+}
+
+\singlespacing
+
+So we get at the end that:
+
+\singlespacing
+
+$\frac{\partial f(x)}{\partial x} = 2x$
