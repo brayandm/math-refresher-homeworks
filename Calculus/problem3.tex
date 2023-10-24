@@ -1,3 +1,79 @@
 \textbf{Problem 3:}
 
 \singlespacing
+
+$f(x) = x^TAc,\quad A \in \mathbb{R}^{N\times N},\quad x \in \mathbb{R}^N, \quad c \in \mathbb{R}^N$
+
+\singlespacing
+
+Then we have to calculate $\frac{\partial f(x)}{\partial x}$
+
+\singlespacing
+
+Because $f(x)$ is a scalar and $x$ is a vector then $\frac{\partial f(x)}{\partial x}$
+can be written as the following vector:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.8}
+    $\frac{\partial f(x)}{\partial x} = \begin{bmatrix}
+            \frac{\partial f(x)}{\partial x_1} \\
+            \frac{\partial f(x)}{\partial x_2} \\
+            \vdots                             \\
+            \frac{\partial f(x)}{\partial x_N}
+        \end{bmatrix}$
+}
+
+\singlespacing
+
+Now we will calculate each partial derivative. But before
+let's define vector $b$ as $b = Ac$, because matrix $A$ multiplied
+by vector $c$ will result in a vector $b$ with $N$ elements.
+
+\singlespacing
+
+So we have now $f(x) = x^Tb$
+
+\singlespacing
+
+Then $\frac{\partial f(x)}{\partial x_i} = \frac{\partial x^Tb}{\partial x_i} = \frac{\partial \sum_{i=1}^{N}x_i\cdot b_i}{\partial x_i}$
+
+\singlespacing
+
+Because all $x_j$ with $j \neq i$ are constants and when
+$i = j$ then $\frac{\partial x_i\cdot b_i}{\partial x_i} = b_i$
+
+\singlespacing
+
+Repeating this for all $i$ we get:
+
+\singlespacing
+
+{
+    \renewcommand{\arraystretch}{1.8}
+    $\frac{\partial f(x)}{\partial x} = \begin{bmatrix}
+            b_1    \\
+            b_2    \\
+            \vdots \\
+            b_N
+        \end{bmatrix}$
+}
+
+\singlespacing
+
+So we get at the end that:
+
+\singlespacing
+
+
+$\frac{\partial f(x)}{\partial x} = b$
+
+\singlespacing
+
+Then replacing $b$ with $Ac$ we get:
+
+\singlespacing
+
+$\frac{\partial f(x)}{\partial x} = Ac$
+
