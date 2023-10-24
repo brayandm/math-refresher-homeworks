@@ -1,3 +1,114 @@
 \textbf{Problem 7:}
 
 \singlespacing
+
+
+\begin{equation}
+    \sum_{n=1}^{\infty} \frac{1}{n^p}
+\end{equation}
+
+\singlespacing
+
+First let's notice that if $p<=0$ then $\frac{1}{n^p} <= \frac{1}{(n+1)^p}$,
+so the series is increasing, also we can notice that the series is positive.
+
+\singlespacing
+
+Then taking $n=1$ we have $\frac{1}{1^p} = 1$ and the rest of the terms are
+greater or equal than $1$, so the sum of infinite terms greater or equal than $1$ is infinite,
+
+\singlespacing
+
+So the series diverges for $p<=0$.
+
+\singlespacing
+\singlespacing
+\singlespacing
+
+Now let's take $p>0$
+
+\singlespacing
+
+We have that if $p>0$ then $\frac{1}{n^p} > \frac{1}{(n+1)^p}$, so the series is decreasing. Also we can notice that $\frac{1}{n^p} > 0$.
+
+\singlespacing
+
+Then the series is positive, monotone decreasing and it is defined in interval $[1, \infty)$
+
+\singlespacing
+
+So we can apply the integral test for convergence:
+
+\singlespacing
+
+A infinite series $\sum_{n=N}^{\infty} f(n)$ converges if and only if the improper integral $\int_{N}^{\infty} f(x) dx$ converges.
+
+\singlespacing
+
+So taking $f(x) = \frac{1}{x^p} = x^{-p}$
+
+\singlespacing
+
+We have that:
+
+\singlespacing
+
+$\int_{1}^{\infty} x^{-p} dx = \lim_{b \to \infty} \int_{1}^{b} x^{-p} dx$
+
+\singlespacing
+
+Then the integral of $x^{-p}$ is $\frac{x^{-p+1}}{-p+1}$ by the power rule.
+
+\singlespacing
+
+$\lim_{b \to \infty} \int_{1}^{b} x^{-p} dx = \lim_{b \to \infty} \frac{x^{-p+1}}{-p+1} \Big|_{1}^{b} = \lim_{b \to \infty} \frac{b^{-p+1}}{-p+1} - \frac{1^{-p+1}}{-p+1} = \lim_{b \to \infty} \frac{b^{-p+1}}{-p+1} + \frac{1}{p-1}$
+
+\singlespacing
+
+Now let's analyze three cases:
+
+\singlespacing
+
+\textbf{a)} When $p<1$
+
+\singlespacing
+
+Then $-p+1 > 0$ and $\lim_{b \to \infty} \frac{b^{-p+1}}{-p+1}  + \frac{1}{p-1} = \lim_{b \to \infty} \frac{b^{-p+1}}{-p+1} = \lim_{b \to \infty} b^{-p+1} = \infty$
+
+\singlespacing
+
+Because $b \to \infty$ and $-p+1 > 0$ so $b^{-p+1} \to \infty$ and the series diverges.
+
+\singlespacing
+
+\textbf{b)} When $p=1$
+
+\singlespacing
+
+In this case $f(x) = 1/x$ so $\int f(x) dx = \ln(x)$
+
+\singlespacing
+
+Then $\lim_{b \to \infty} \int_{1}^{b} \frac{1}{x} dx = \lim_{b \to \infty} \ln(b) - \ln(1) = \lim_{b \to \infty} \ln(b) = \infty$
+
+\singlespacing
+
+So the series diverges.
+
+\singlespacing
+
+\textbf{c)} When $p>1$
+
+\singlespacing
+
+Then $-p+1 < 0$ and $\lim_{b \to \infty} \frac{b^{-p+1}}{-p+1}  + \frac{1}{p-1} = \lim_{b \to \infty} \frac{b^{-p+1}}{-p+1} = \lim_{b \to \infty} b^{-p+1} = 0$
+
+\singlespacing
+
+Because $b \to \infty$ and $-p+1 < 0$ so $b^{-p+1} \to 0$ and the series converges.
+
+\singlespacing
+\singlespacing
+\singlespacing
+
+So the series converges for $p>1$ and diverges for $p<=0$.
