@@ -1,3 +1,125 @@
 \textbf{Problem 5:}
 
 \singlespacing
+
+$z = 12x - 5y,\quad \lVert (x, y)\rVert = 1 $
+
+\singlespacing
+
+We can transform $\lVert (x, y)\rVert = 1$ to $x^2 + y^2 = 1$
+
+\singlespacing
+
+So we have a constrained optimization problem:
+
+\singlespacing
+
+Let's use the Lagrange multiplier method:
+
+\singlespacing
+
+$L(x, y, \lambda) = 12x - 5y + \lambda(x^2 + y^2 - 1)$
+
+\singlespacing
+
+Now we have to calculate the partial derivatives:
+
+\singlespacing
+
+$\frac{\partial L(x, y, \lambda)}{\partial x} = 12 + 2\lambda x = 0$
+
+\singlespacing
+
+$\frac{\partial L(x, y, \lambda)}{\partial y} = -5 + 2\lambda y = 0$
+
+\singlespacing
+
+$\frac{\partial L(x, y, \lambda)}{\partial \lambda} = x^2 + y^2 - 1 = 0$
+
+\singlespacing
+
+From the first equation we get $x = -\frac{6}{\lambda}$
+
+\singlespacing
+
+From the second equation we get $y = \frac{5}{2\lambda}$
+
+\singlespacing
+
+Now we can substitute $x$ and $y$ in the third equation:
+
+\singlespacing
+
+$\left(-\frac{6}{\lambda}\right)^2 + \left(\frac{5}{2\lambda}\right)^2 - 1 = 0$
+
+\singlespacing
+
+$\frac{36}{\lambda^2} + \frac{25}{4\lambda^2} - 1 = 0$
+
+\singlespacing
+
+$\frac{36}{\lambda^2} + \frac{25}{4\lambda^2} = 1$
+
+\singlespacing
+
+$\frac{144}{4\lambda^2} + \frac{25}{4\lambda^2} = 1$
+
+\singlespacing
+
+$\frac{169}{4\lambda^2} = 1$
+
+\singlespacing
+
+$\lambda^2 = \frac{169}{4}$
+
+\singlespacing
+
+$\lambda = \pm \frac{13}{2}$
+
+\singlespacing
+
+So we have two solutions $\lambda_1 = \frac{13}{2}$ and $\lambda_2 = -\frac{13}{2}$
+
+\singlespacing
+
+Now we can substitute $\lambda_1$ and $\lambda_2$ in $x$ and $y$:
+
+\singlespacing
+
+$x_1 = -\frac{6}{\frac{13}{2}} = -\frac{12}{13}$
+
+\singlespacing
+
+$y_1 = \frac{5}{2\cdot \frac{13}{2}} = \frac{5}{13}$
+
+\singlespacing
+
+$x_2 = -\frac{6}{-\frac{13}{2}} = \frac{12}{13}$
+
+\singlespacing
+
+$y_2 = \frac{5}{2\cdot -\frac{13}{2}} = -\frac{5}{13}$
+
+\singlespacing
+
+So we have two solutions $(x_1, y_1) = \left(-\frac{12}{13}, \frac{5}{13}\right)$ and $(x_2, y_2) = \left(\frac{12}{13}, -\frac{5}{13}\right)$
+
+\singlespacing
+
+Now we have to check which solution is the maximum and which is the minimum:
+
+\singlespacing
+
+$z_1 = 12\cdot \left(-\frac{12}{13}\right) - 5\cdot \frac{5}{13} = -\frac{144}{13} - \frac{25}{13} = -\frac{169}{13}$
+
+\singlespacing
+
+$z_2 = 12\cdot \frac{12}{13} - 5\cdot \left(-\frac{5}{13}\right) = \frac{144}{13} + \frac{25}{13} = \frac{169}{13}$
+
+\singlespacing
+
+So the maximum is $z_2 = \frac{169}{13}$ with the solution $(x_2, y_2) = \left(\frac{12}{13}, -\frac{5}{13}\right)$
+
+\singlespacing
+
+And the minimum is $z_1 = -\frac{169}{13}$ with the solution $(x_1, y_1) = \left(-\frac{12}{13}, \frac{5}{13}\right)$
