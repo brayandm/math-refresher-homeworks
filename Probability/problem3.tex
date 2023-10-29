@@ -2,4 +2,71 @@
 
 \singlespacing
 
-Hello World
+$P\left(\bigcup_{k=1}^{n} B_k\right) \leq \sum_{k=1}^{n} P(B_k),\quad B_1, B_2, \dots, B_n \in \mathcal{F}$
+
+\singlespacing
+
+We have the property that $P(A \cup B) = P(A) + P(B) - P(A \cap B)$, then:
+
+\singlespacing
+
+Let's prove it by induction:
+
+\singlespacing
+
+\textbf{Base case:} $n = 1$
+
+\singlespacing
+
+$P(B_1) \leq P(B_1)$
+
+\singlespacing
+
+\textbf{Inductive step:}
+
+\singlespacing
+
+We assume that the property holds for $n$ events, that is:
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n} B_k\right) \leq \sum_{k=1}^{n} P(B_k)$
+
+\singlespacing
+
+Now we need to prove that the property holds for $n + 1$ events, that is:
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n+1} B_k\right) \leq \sum_{k=1}^{n+1} P(B_k)$
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n} B_k \cup B_{n+1}\right) \leq \sum_{k=1}^{n} P(B_k) + P(B_{n+1})$
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n} B_k\right) + P(B_{n+1}) - P\left(\bigcup_{k=1}^{n} B_k \cap B_{n+1}\right) \leq \sum_{k=1}^{n} P(B_k) + P(B_{n+1})$
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n} B_k\right) - P\left(\bigcup_{k=1}^{n} B_k \cap B_{n+1}\right) \leq \sum_{k=1}^{n} P(B_k)$
+
+\singlespacing
+
+Because $P(A) \geq 0$ for any $A \in \mathcal{F}$, then $P\left(\bigcup_{k=1}^{n} B_k \cap B_{n+1}\right)$
+is also positive, then we can remove it from the left side of the inequality, because
+it will make the left side smaller, and the inequality will still hold:
+
+\singlespacing
+
+$P\left(\bigcup_{k=1}^{n} B_k\right) \leq \sum_{k=1}^{n} P(B_k)$
+
+\singlespacing
+
+Which is true by the inductive hypothesis.
+
+\singlespacing
+
+Then the property holds for $n + 1$ events, and by the principle of mathematical induction
+the property holds for any $n \in \mathbb{N}$.
