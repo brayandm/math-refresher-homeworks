@@ -2,5 +2,66 @@
 
 \singlespacing
 
-A fair coin dice is rolled n times. What is the probability that at least 1 of the
-6 values never appears.
+Let's calculate the probability that the value 1 never appears. The probability
+of that is given by the number of sequences of $n$ rolls that don't have the value 1,
+that is $5^n$, divided by the total number of sequences of $n$ rolls, that is $6^n$.
+Then the probability that the value 1 never appears is given by:
+
+\singlespacing
+
+\begin{equation}
+    \frac{5^n}{6^n}
+\end{equation}
+
+\singlespacing
+
+So we have 6 possible values, then the probability that at least 1 of the 6 values
+never appears is given by:
+
+\singlespacing
+
+\begin{equation}
+    6 \cdot\frac{5^n}{6^n}
+\end{equation}
+
+\singlespacing
+
+But let's notice that we are counting more than once the sequences that don't have
+two values, for example, we are counting twice the sequences that don't have the
+values 1 and 2, because we are counting them when we calculate the probability that
+the value 1 never appears and when we calculate the probability that the value 2 never
+appears. Then we need to subtract the sequences that don't have two values, that is
+$4^n$, and because we have $\binom{6}{2}$ ways to choose two values, then the probability
+that at least 1 of the 6 values never appears is given by:
+
+\singlespacing
+
+\begin{equation}
+    6 \cdot\frac{5^n}{6^n} - \binom{6}{2} \cdot \frac{4^n}{6^n}
+\end{equation}
+
+\singlespacing
+
+But then we are subtracting too much, because we are subtracting the sequences that
+don't have three values three times, then we need to add them back.
+
+\singlespacing
+
+\begin{equation}
+    6 \cdot\frac{5^n}{6^n} - \binom{6}{2} \cdot \frac{4^n}{6^n} + \binom{6}{3} \cdot \frac{3^n}{6^n}
+\end{equation}
+
+\singlespacing
+
+So seeing this pattern, we can notice that this is given by the inclusion-exclusion principle,
+then the probability that at least 1 of the 6 values never appears is given by:
+
+\singlespacing
+
+\begin{equation}
+    \sum_{i=1}^{5} (-1)^{i+1} \binom{6}{i} \frac{(6 - i)^n}{6^n}
+\end{equation}
+
+\singlespacing
+
+*Note that $\binom{n}{r} = \frac{n!}{r! (n - r)!}$
