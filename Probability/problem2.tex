@@ -2,4 +2,38 @@
 
 \singlespacing
 
-Hello World
+Instead of calculating the probability of the event of at least 1 of the 6 values never appearing,
+we can calculate the probability of the event of exactly x values never appearing for $x \in \{1, 2, 3, 4, 5\}$,
+and then sum the probabilities of those events.
+
+\singlespacing
+
+For calculate the probability of the event of exactly x values never appearing
+first we need to select x values from the 6 possible values to be the missing values,
+and then we need to calculate the probability of each sequence of n rolls having exactly
+those x values missing.
+
+\singlespacing
+
+The number of ways of selecting x values from 6 possible values is given by the binomial coefficient $\binom{6}{x}$.
+
+\singlespacing
+
+So because we have 6 possible values and we want to choose x of them to be missing we will
+have $6 - x$ possible values that will appear in the sequence of n rolls,
+and then the total of these sequences will be $(6 - x)^n$. But because there are $\binom{6}{x}$
+possible ways of choosing the missing values, then the total of sequences with exactly x values
+missing will be $\binom{6}{x} (6 - x)^n$.
+
+\singlespacing
+
+Now let's sum these amount of sequences for each possible value of x, and then
+divide by the total amount of possible sequences, that is $6^n$.
+
+\singlespacing
+
+\begin{equation}
+    \frac{\sum_{x=1}^{5} \binom{6}{x} (6 - x)^n}{6^n}
+\end{equation}
+
+\singlespacing
