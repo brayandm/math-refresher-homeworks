@@ -2,4 +2,36 @@
 
 \singlespacing
 
-Hello World
+In this problem because we are extracting balls with replacement
+the probability of extracting a red ball is the same for each extraction, also
+the action of extracting a ball is independent of the previous extractions.
+
+\singlespacing
+
+Let's define the probability of extracting a red ball as $P(A) = \frac{m_1}{m}$, where
+$A$ is the event of extracting a red ball, and the probability of extracting a green ball as $P(B) = \frac{m_2}{m}$, where
+$B$ is the event of extracting a green ball.
+
+\singlespacing
+
+In each extraction we can have two possible outcomes, either we extract a red ball
+or we extract a green ball. Then in $n$ extractions we can have $2^n$ possible outcomes for
+the total sequence of extractions. But it is easy to calculate that the number of sequences
+with exactly $r$ red balls is given by the binomial coefficient $\binom{n}{r}$, because
+we have $n$ extractions and we want to choose $r$ of them to be red.
+
+\singlespacing
+
+Then because the extractions are independent it we have a sequence of $n$ extractions
+with exactly $r$ red balls the probability of that sequence is given by the product of the
+probabilities of each extraction, that is $P(A)^r P(B)^{n-r}$.
+
+\singlespacing
+
+Then the probability of having a sequence of $n$ extractions with exactly $r$ red balls is given by:
+
+\singlespacing
+
+\begin{equation}
+    P(x) = \binom{n}{r} P(A)^r P(B)^{n-r}
+\end{equation}
