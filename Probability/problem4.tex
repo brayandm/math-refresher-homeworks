@@ -12,3 +12,140 @@ approaches a from the left.
     \item $P([a, b)) = F(b -) - F(a -)$
     \item $P(\{x\}) = F(x) - F(x -)$
 \end{enumerate}
+
+
+\textbf{1)}
+
+\singlespacing
+
+We have that $P([a, b])$ is the probability that $X$ is in the interval $[a, b]$, then:
+
+\singlespacing
+
+\begin{equation}
+    P([a, b]) = P(a \leq X \leq b) = P(X \leq b) - P(X < a)
+\end{equation}
+
+\singlespacing
+
+This is because we include all the values of $X$ that are less than or equal to $b$,
+but we exclude all the values of $X$ that are less than $a$.
+
+\singlespacing
+
+Then because $F$ is the distribution function of $P$ we have that:
+
+\singlespacing
+
+\begin{equation}
+    P(X \leq b) - P(X < a) = F(b) - F(a -)
+\end{equation}
+
+\singlespacing
+
+So $P([a, b]) = F(b) - F(a -)$ and the equality is \textbf{true}.
+
+\singlespacing
+\singlespacing
+\singlespacing
+
+\textbf{2)}
+
+\singlespacing
+
+We have that $P((a, b))$ is the probability that $X$ is in the interval $(a, b)$, then:
+
+\singlespacing
+
+\begin{equation}
+    P((a, b)) = P(a < X < b) = P(X < b) - P(X \leq a)
+\end{equation}
+
+\singlespacing
+
+This is because we include all the values of $X$ that are less than $b$,
+but we exclude all the values of $X$ that are less than or equal to $a$.
+
+\singlespacing
+
+Then because $F$ is the distribution function of $P$ we have that:
+
+\singlespacing
+
+\begin{equation}
+    P(X < b) - P(X \leq a) = F(b-) - F(a)
+\end{equation}
+
+\singlespacing
+
+So $P((a, b)) = F(b-) - F(a)$ and the equality is \textbf{false}.
+
+\singlespacing
+
+\break
+
+\textbf{3)}
+
+\singlespacing
+
+We have that $P([a, b))$ is the probability that $X$ is in the interval $[a, b)$, then:
+
+\singlespacing
+
+\begin{equation}
+    P([a, b)) = P(a \leq X < b) = P(X < b) - P(X < a)
+\end{equation}
+
+\singlespacing
+
+This is because we include all the values of $X$ that are less than $b$,
+but we exclude all the values of $X$ that are less than $a$.
+
+\singlespacing
+
+Then because $F$ is the distribution function of $P$ we have that:
+
+\singlespacing
+
+\begin{equation}
+    P(X < b) - P(X < a) = F(b-) - F(a-)
+\end{equation}
+
+\singlespacing
+
+So $P([a, b)) = F(b-) - F(a-)$ and the equality is \textbf{true}.
+
+\singlespacing
+\singlespacing
+\singlespacing
+
+\textbf{4)}
+
+\singlespacing
+
+We have that $P(\{x\})$ is the probability that $X$ takes the value $x$, then:
+
+\singlespacing
+
+\begin{equation}
+    P(\{x\}) = P(X = x) = P(X \leq x) - P(X < x)
+\end{equation}
+
+\singlespacing
+
+This is because we include all the values of $X$ that are less than or equal to $x$,
+but we exclude all the values of $X$ that are less than $x$.
+
+\singlespacing
+
+Then because $F$ is the distribution function of $P$ we have that:
+
+\singlespacing
+
+\begin{equation}
+    P(X \leq x) - P(X < x) = F(x) - F(x-)
+\end{equation}
+
+\singlespacing
+
+So $P(\{x\}) = F(x) - F(x-)$ and the equality is \textbf{true}.
