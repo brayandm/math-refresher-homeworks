@@ -2,10 +2,84 @@
 
 \singlespacing
 
-Consider $X$ with Poisson distribution $X \sim Pois(\lambda)$:
+By definition of expectation we have that:
+
+\singlespacing
 
 \begin{equation}
-    \mathbb{P}(X = k) =\frac{\lambda^k}{k!}e^{-\lambda}
+    \mathbb{E}[X] = \sum_{k=0}^{\infty} k \frac{\lambda^k}{k!}e^{-\lambda}
 \end{equation}
 
-What is $\mathbb{E}[X]$?
+\singlespacing
+
+Let's extract $e^{-\lambda}$ from the sum, because it is a constant:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \sum_{k=0}^{\infty} k \frac{\lambda^k}{k!}
+\end{equation}
+
+\singlespacing
+
+We can notice that when $k = 0$ the term $k \frac{\lambda^k}{k!}$ is equal to $0$,
+so we can start the sum from $k = 1$:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \sum_{k=1}^{\infty} k \frac{\lambda^k}{k!}
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \sum_{k=1}^{\infty} \frac{\lambda^k}{(k-1)!}
+\end{equation}
+
+\singlespacing
+
+Let's extract now one $\lambda$ from the sum:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \lambda \sum_{k=1}^{\infty} \frac{\lambda^{k-1}}{(k-1)!}
+\end{equation}
+
+\singlespacing
+
+Now we can see that the sum seems to be the Taylor series of $e^{\lambda}$, but
+starting from $k = 1$ instead of $k = 0$. Then if we substitute $k - 1$ with $t$:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \lambda \sum_{t=0}^{\infty} \frac{\lambda^{t}}{t!}
+\end{equation}
+
+\singlespacing
+
+\break
+
+Then the sum is equal to $e^{\lambda}$:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = e^{-\lambda} \lambda e^{\lambda}
+\end{equation}
+
+\singlespacing
+
+Multiplying the two exponentials we get:
+
+\singlespacing
+
+\begin{equation}
+    \mathbb{E}[X] = \lambda
+\end{equation}
+
+\singlespacing
+
+So the expectation of $X$ is $\lambda$.
