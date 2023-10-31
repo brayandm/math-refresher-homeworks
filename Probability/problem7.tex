@@ -78,7 +78,7 @@ We have three cases:
 
 \singlespacing
 
-In this case $p_1(x) = 0$, because the density function is zero for $x < 0$:
+In this case $F_1(x) = 0$, because the density function is zero for $x < 0$:
 
 \break
 \textbf{Case 2:} $0 \leq x \leq 1$
@@ -86,3 +86,93 @@ In this case $p_1(x) = 0$, because the density function is zero for $x < 0$:
 \singlespacing
 
 In this case $p_1(x) = \frac{4\sqrt{1 - x^2}}{\pi}$, so:
+
+\singlespacing
+
+\begin{equation}
+    F_1(x) = \int_{0}^{x} \frac{4\sqrt{1 - u^2}}{\pi} \, du
+\end{equation}
+
+\singlespacing
+Take the integral:
+\singlespacing
+\begin{equation}
+    \int \frac{4 \sqrt{1 - u^2}}{\pi} \, du
+\end{equation}
+
+\singlespacing
+Factor out constants:
+\singlespacing
+\begin{equation}
+    = \frac{4}{\pi} \int \sqrt{1 - u^2} \, du
+\end{equation}
+
+\singlespacing
+For the integrand \(\sqrt{1 - u^2}\), substitute \(u = \sin(s)\) and \(du = \cos(s) \, ds\). Then \(\sqrt{1 - u^2} = \sqrt{1 - \sin^2(s)} = \cos(s)\) and \(s = \sin^{-1}(u)\):
+\singlespacing
+\begin{equation}
+    = \frac{4}{\pi} \int \cos^2(s) \, ds
+\end{equation}
+
+\singlespacing
+Write \(\cos^2(s)\) as \(\frac{1}{2} \cos(2 s) + \frac{1}{2}\):
+\singlespacing
+\begin{equation}
+    = \frac{4}{\pi} \int \left( \frac{1}{2} \cos(2 s) + \frac{1}{2} \right) \, ds
+\end{equation}
+
+\singlespacing
+Integrate the sum term by term and factor out constants:
+\singlespacing
+\begin{equation}
+    = \frac{2}{\pi} \int \cos(2 s) \, ds + \frac{2}{\pi} \int 1 \, ds
+\end{equation}
+
+\singlespacing
+For the integrand \(\cos(2 s)\), substitute \(p = 2 s\) and \(dp = 2 \, ds\):
+\singlespacing
+\begin{equation}
+    = \frac{1}{\pi} \int \cos(p) \, dp + \frac{2}{\pi} \int 1 \, ds
+\end{equation}
+
+\singlespacing
+The integral of \(\cos(p)\) is \(\sin(p)\):
+\singlespacing
+\begin{equation}
+    = \frac{\sin(p)}{\pi} + \frac{2}{\pi} \int 1 \, ds
+\end{equation}
+
+\singlespacing
+The integral of 1 is \(s\):
+\singlespacing
+\begin{equation}
+    = \frac{\sin(p)}{\pi} + \frac{2 s}{\pi} + C
+\end{equation}
+
+\singlespacing
+Substitute back for \(p = 2 s\):
+\singlespacing
+\begin{equation}
+    = \frac{2 s + \sin(2 s)}{\pi} + C
+\end{equation}
+
+\singlespacing
+Apply the double angle formula \(\sin(2 s) = 2 \sin(s) \cos(s)\):
+\singlespacing
+\begin{equation}
+    = \frac{2 s + 2 \sin(s) \cos(s)}{\pi} + C
+\end{equation}
+
+\singlespacing
+Express \(\cos(s)\) in terms of \(\sin(s)\) using \(\cos^2(s) = 1 - \sin^2(s)\):
+\singlespacing
+\begin{equation}
+    = \frac{2 s + 2 \sin(s) \sqrt{1 - \sin^2(s)}}{\pi} + C
+\end{equation}
+
+\singlespacing
+Substitute back for \(s = \sin^{-1}(u)\):
+\singlespacing
+\begin{equation}
+    \text{Answer:} \quad = \frac{2 (\sqrt{1 - u^2} u + \sin^{-1}(u))}{\pi} + C
+\end{equation}
