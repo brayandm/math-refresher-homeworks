@@ -2,11 +2,246 @@
 
 \singlespacing
 
-Let $P$ have density $p$. Find its distribution, $F$, if
+\textbf{Solution:}
+
+\singlespacing
+
+\textbf{Part 1)}
+
+\singlespacing
+
+To find the distribution function $F$ of $P$ we need to integrate the density function $p$:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} p(u) \, du
+\end{equation}
+
+\singlespacing
+
+We have that $p(t) = \frac{I_{[a,b]}(t)}{b-a}$, so:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \frac{I_{[a,b]}(u)}{b-a} \, du
+\end{equation}
+
+\singlespacing
+
+We have 3 cases:
+
+\singlespacing
 
 \begin{enumerate}
-    \item $p(t) = \frac{I_{[a,b]}(t)}{b-a}$
-    \item $p(t) = \lambda e^{-\lambda t}I_{(0,\infty)}(t)$
+    \item $t < a$
+    \item $a \leq t \leq b$
+    \item $t > b$
 \end{enumerate}
 
-Find the product of $F_1(2b)F_2(\text{ln}\; 2/\lambda)$
+\singlespacing
+
+\textbf{Case 1:} $t < a$
+
+\singlespacing
+
+In this case $I_{[a,b]}(u) = 0$, so:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \frac{I_{[a,b]}(u)}{b-a} \, du = \int_{-\infty}^{t} 0 \, du = 0
+\end{equation}
+
+\singlespacing
+
+\textbf{Case 2:} $a \leq t \leq b$
+
+\singlespacing
+
+In this case $I_{[a,b]}(u) = 1$, and we only need to integrate from $a$ to $t$,
+because the density function is zero outside of $[a, b]$:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \frac{I_{[a,b]}(u)}{b-a} \, du = \int_{a}^{t} \frac{1}{b-a} \, du = \Big(\frac{u}{b-a} \Big)\Big|_{a}^{t} = \frac{t}{b-a} - \frac{a}{b-a} = \frac{t - a}{b-a}
+\end{equation}
+
+\singlespacing
+
+\textbf{Case 3:} $t > b$
+
+\singlespacing
+
+In this case $I_{[a,b]}(u) = 1$, and we need to integrate from $a$ to $b$,
+because the density function is zero outside of $[a, b]$:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \frac{I_{[a,b]}(u)}{b-a} \, du = \int_{a}^{b} \frac{1}{b-a} \, du = \Big(\frac{u}{b-a} \Big)\Big|_{a}^{b} = \frac{b}{b-a} - \frac{a}{b-a} = \frac{b - a}{b-a} = 1
+\end{equation}
+
+\singlespacing
+
+So, the distribution function $F$ of $P$ is:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \begin{cases}
+        0                 & \text{if } t < a           \\
+        \frac{t - a}{b-a} & \text{if } a \leq t \leq b \\
+        1                 & \text{if } t > b
+    \end{cases}
+\end{equation}
+
+\singlespacing
+
+\textbf{Part 2)}
+
+\singlespacing
+
+To find the distribution function $F$ of $P$ we need to integrate the density function $p$:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} p(u) \, du
+\end{equation}
+
+\singlespacing
+
+We have that $p(t) = \lambda e^{-\lambda t}I_{(0,\infty)}(t)$, so:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \lambda e^{-\lambda u}I_{(0,\infty)}(u) \, du
+\end{equation}
+
+\singlespacing
+
+We have 2 cases:
+
+\singlespacing
+
+\begin{enumerate}
+    \item $t < 0$
+    \item $t \geq 0$
+\end{enumerate}
+
+\singlespacing
+
+\textbf{Case 1:} $t < 0$
+
+\singlespacing
+
+In this case $I_{(0,\infty)}(u) = 0$, so:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \lambda e^{-\lambda u}I_{(0,\infty)}(u) \, du = \int_{-\infty}^{t} 0 \, du = 0
+\end{equation}
+
+\singlespacing
+
+\textbf{Case 2:} $t \geq 0$
+
+\singlespacing
+
+In this case $I_{(0,\infty)}(u) = 1$, and we only need to integrate from $0$ to $t$,
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \int_{-\infty}^{t} \lambda e^{-\lambda u}I_{(0,\infty)}(u) \, du = \int_{0}^{t} \lambda e^{-\lambda u} \, du = \Big(-e^{-\lambda u} \Big)\Big|_{0}^{t} = -e^{-\lambda t} + e^{-\lambda 0} = 1 - e^{-\lambda t}
+\end{equation}
+
+\singlespacing
+
+So, the distribution function $F$ of $P$ is:
+
+\singlespacing
+
+\begin{equation}
+    F(t) = \begin{cases}
+        0                  & \text{if } t < 0    \\
+        1 - e^{-\lambda t} & \text{if } t \geq 0
+    \end{cases}
+\end{equation}
+
+\singlespacing
+
+\textbf{Part 3)}
+
+\singlespacing
+
+We have that:
+
+\singlespacing
+
+\begin{equation}
+    F_1(t) = \begin{cases}
+        0                 & \text{if } t < a           \\
+        \frac{t - a}{b-a} & \text{if } a \leq t \leq b \\
+        1                 & \text{if } t > b
+    \end{cases}
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    F_2(t) = \begin{cases}
+        0                  & \text{if } t < 0    \\
+        1 - e^{-\lambda t} & \text{if } t \geq 0
+    \end{cases}
+\end{equation}
+
+\singlespacing
+
+We need to find $F_1(2b)F_2(\text{ln}\; 2/\lambda)$:
+
+\singlespacing
+
+We have three cases:
+
+\singlespacing
+
+\begin{enumerate}
+    \item $\lambda < 0$
+    \item $\lambda \geq 0$
+\end{enumerate}
+
+\singlespacing
+
+\textbf{Case 1:} $\lambda < 0$
+
+\singlespacing
+
+In this case $F_2(\text{ln}\; 2/\lambda) = 0$, because $\text{ln}\; 2/\lambda < 0$,
+and also $F_1(2b) = 0$ because $2b > b$:
+
+\singlespacing
+
+\begin{equation}
+    F_1(2b)F_2(\text{ln}\; 2/\lambda) = F_1(2b)F_2(\text{ln}\; 2/\lambda) = 1 * 0 = 0
+\end{equation}
+
+\singlespacing
+
+\textbf{Case 2:} $\lambda \geq 0$
+
+\singlespacing
+
+In this case $F_2(\text{ln}\; 2/\lambda) = 1 - e^{-\lambda \text{ln}\; 2/\lambda} = 1 - e^{-\text{ln}\; 2} = 1 - \frac{1}{2} = \frac{1}{2}$,
+and also $F_1(2b) = 1$ because $2b > b$:
+
+\singlespacing
+
+\begin{equation}
+    F_1(2b)F_2(\text{ln}\; 2/\lambda) = F_1(2b)F_2(\text{ln}\; 2/\lambda) = 1 * \frac{1}{2} = \frac{1}{2}
+\end{equation}
