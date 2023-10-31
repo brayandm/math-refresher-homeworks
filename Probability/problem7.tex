@@ -12,6 +12,9 @@ Let $P$ be the uniform distribution on the quarter disc
 
 \singlespacing
 
+\textbf{part 1)}
+\singlespacing
+
 Let's find the marginal probability density function $p_1(x)$ that
 is defined as:
 
@@ -64,6 +67,8 @@ Now generalizing for $x \in \mathbb{R}$, because the density function is zero ou
 
 
 \singlespacing
+\textbf{part 2)}
+\singlespacing
 
 Now we can find the distribution function $F_1$, for that we need to integrate the density function $p_1$,
 from $0$ to $x$, because the density function is zero outside of $[0, 1]$:
@@ -79,8 +84,8 @@ We have three cases:
 \singlespacing
 
 In this case $F_1(x) = 0$, because the density function is zero for $x < 0$:
+\singlespacing
 
-\break
 \textbf{Case 2:} $0 \leq x \leq 1$
 
 \singlespacing
@@ -94,7 +99,7 @@ In this case $p_1(x) = \frac{4\sqrt{1 - x^2}}{\pi}$, so:
 \end{equation}
 
 \singlespacing
-Take the integral:
+Let's find the antiderivative of $F_1(x)$, and then we will evaluate it at $x$ and $0$:
 \singlespacing
 \begin{equation}
     \int \frac{4 \sqrt{1 - u^2}}{\pi} \, du
@@ -175,4 +180,50 @@ Substitute back for \(s = \sin^{-1}(u)\):
 \singlespacing
 \begin{equation}
     \text{Answer:} \quad = \frac{2 (\sqrt{1 - u^2} u + \sin^{-1}(u))}{\pi} + C
+\end{equation}
+
+\singlespacing
+
+Now we can evaluate the antiderivative at $x$ and $0$:
+
+\singlespacing
+
+\begin{equation}
+    F_1(x) = \Big( \frac{2 (\sqrt{1 - u^2} u + \sin^{-1}(u))}{\pi} \Big)\Big|_{0}^{x} = \frac{2 (\sqrt{1 - x^2} x + \sin^{-1}(x))}{\pi} - \frac{2 (\sqrt{1 - 0^2} 0 + \sin^{-1}(0))}{\pi} = \frac{2 (\sqrt{1 - x^2} x + \sin^{-1}(x))}{\pi}
+\end{equation}
+
+\singlespacing
+
+\textbf{Case 3:} $x > 1$
+
+\singlespacing
+
+In this case $F_1(x) = 1$, because $x$ is greater than all the values where the density function is non-zero,
+so the integral is equal to $1$.
+
+\singlespacing
+
+So, the distribution function $F_1$ of $P$ is:
+
+\singlespacing
+
+\begin{equation}
+    F_1(x) = \begin{cases}
+        0                                               & \text{if } x < 0           \\
+        \frac{2 (\sqrt{1 - x^2} x + \sin^{-1}(x))}{\pi} & \text{if } 0 \leq x \leq 1 \\
+        1                                               & \text{if } x > 1
+    \end{cases}
+\end{equation}
+
+\singlespacing
+
+\textbf{part 3)}
+\singlespacing
+
+Now let's evaluate $p_1$ at $x = \sqrt{1 - (\pi/4)^2}$:
+
+\singlespacing
+
+\begin{equation}
+    p_1(\sqrt{1 - (\pi/4)^2}) = \frac{4\sqrt{1 - (\sqrt{1 - (\pi/4)^2})^2}}{\pi} = \frac{4\sqrt{1 - 1 + (\pi/4)^2}}{\pi} = \frac{4\sqrt{(\pi/4)^2}}{\pi} = \frac{4\pi/4}{\pi} = 1
 \end{equation}
