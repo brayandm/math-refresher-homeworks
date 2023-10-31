@@ -4,44 +4,85 @@
 
 Let $P$ be the uniform distribution on the quarter disc
 
+\singlespacing
+
 \begin{equation}
     D = \{(x, y): x^2 + y^2 < 1,\quad x > 0,\quad y > 0\}
 \end{equation}
 
-Let $P_1(x)$ be its \textit{marginal distribution} (marginalized $y$).
-Find the density function $p_1(x)$ of it, as well as the
-distribution function $F_1$. Find the numerical value of $p_1 (\sqrt{1 - (\pi/4)^2})$.
+\singlespacing
+
+Let's find the marginal probability density function $p_1(x)$ that
+is defined as:
 
 \singlespacing
 
-% To find the marginal distribution \( P_1(x) \) of the uniform distribution on the quarter disc \( D \), we need to integrate out the \( y \) variable. The quarter disc is defined as:
+\begin{equation}
+    p_1(x) = \int_{-\infty}^{\infty} p(x, y) \, dy
+\end{equation}
 
-% \[ D = \{(x, y) : x^2 + y^2 < 1, x > 0, y > 0\} \]
+\singlespacing
 
-% The uniform distribution on this quarter disc means that the probability density function (pdf) is constant over \( D \) and zero elsewhere. To find this constant, we need to ensure that the total probability over \( D \) is 1. The area of \( D \) is \( \frac{1}{4}\pi \), so the pdf \( p(x, y) \) is:
+Where $p(x, y)$ is the joint probability density function of $P$.
 
-% \[ p(x, y) = \frac{4}{\pi} \quad \text{for } (x, y) \in D \]
+\singlespacing
 
-% Now, to find the marginal distribution \( P_1(x) \), we integrate out \( y \):
+Let's find the joint probability density function $p(x, y)$:
 
-% \[ P_1(x) = \int_{-\infty}^{\infty} p(x, y) \, dy \]
+\singlespacing
 
-% Since \( p(x, y) \) is zero outside of \( D \), we only need to integrate over the values of \( y \) that correspond to a given \( x \) in \( D \). For a given \( x \) in \( D \), \( y \) ranges from 0 to \( \sqrt{1 - x^2} \). So the integral becomes:
+The uniform distribution on a quarter disc means that the probability density function (pdf) is constant over \( D \) and zero elsewhere. To find this constant, we need to ensure that the total probability over \( D \) is 1. The area of \( D \) is \( \frac{1}{4}\pi \), so the pdf \( p(x, y) \) is:
 
-% \[ P_1(x) = \int_{0}^{\sqrt{1 - x^2}} \frac{4}{\pi} \, dy = \frac{4}{\pi} \sqrt{1 - x^2} \]
+\[ p(x, y) = \frac{4}{\pi} \quad \text{for } (x, y) \in D \]
 
-% This is the probability density function \( p_1(x) \) of the marginal distribution.
+\singlespacing
 
-% The distribution function \( F_1(x) \) is found by integrating the pdf:
+Now we can find the marginal probability density function $p_1(x)$:
 
-% \[ F_1(x) = \int_{-\infty}^{x} p_1(t) \, dt \]
+\singlespacing
 
-% Again, since \( p_1(x) \) is zero outside of \( D \), we only need to integrate from 0 to \( x \):
+Since \( p(x, y) \) is zero outside of \( D \), we only need to integrate over the values of \( y \) that correspond to a given \( x \) in \( D \). For a given \( x \) in \( D \), \( y \) ranges from 0 to \( \sqrt{1 - x^2} \). So the integral becomes:
 
-% \[ F_1(x) = \int_{0}^{x} \frac{4}{\pi} \sqrt{1 - t^2} \, dt \]
+\singlespacing
 
-% Now, to find the numerical value of \( p_1(\sqrt{1 - (\pi/4)^2}) \), we substitute \( x = \sqrt{1 - (\pi/4)^2} \) into \( p_1(x) \):
+\begin{equation}
+    p_1(x) = \int_{0}^{\sqrt{1 - x^2}} p(x, y) \, dy = \int_{0}^{\sqrt{1 - x^2}} \frac{4}{\pi} \, dy = \Big( \frac{4y}{\pi} \Big)\Big|_{0}^{\sqrt{1 - x^2}} = \frac{4\sqrt{1 - x^2}}{\pi} - \frac{4\cdot0}{\pi} = \frac{4\sqrt{1 - x^2}}{\pi}
+\end{equation}
 
-% \[ p_1\left(\sqrt{1 - \left(\frac{\pi}{4}\right)^2}\right) = \frac{4}{\pi} \sqrt{1 - \left(1 - \left(\frac{\pi}{4}\right)^2\right)} = \frac{4}{\pi} \cdot \frac{\pi}{4} = 1 \]
+\singlespacing
 
-% So, \( p_1(\sqrt{1 - (\pi/4)^2}) = 1 \).
+Now generalizing for $x \in \mathbb{R}$, because the density function is zero outside of $[0, 1]$:
+
+\singlespacing
+
+\begin{equation}
+    p_1(x) = \begin{cases}
+        \frac{4\sqrt{1 - x^2}}{\pi} & \text{if } x \in [0, 1] \\
+        0                           & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+
+\singlespacing
+
+Now we can find the distribution function $F_1$, for that we need to integrate the density function $p_1$,
+from $0$ to $x$, because the density function is zero outside of $[0, 1]$:
+
+\singlespacing
+
+We have three cases:
+
+\singlespacing
+
+\textbf{Case 1:} $x < 0$
+
+\singlespacing
+
+In this case $p_1(x) = 0$, because the density function is zero for $x < 0$:
+
+\break
+\textbf{Case 2:} $0 \leq x \leq 1$
+
+\singlespacing
+
+In this case $p_1(x) = \frac{4\sqrt{1 - x^2}}{\pi}$, so:
