@@ -11,3 +11,37 @@ Let $P$ be the uniform distribution on the quarter disc
 Let $P_1(x)$ be its \textit{marginal distribution} (marginalized $y$).
 Find the density function $p_1(x)$ of it, as well as the
 distribution function $F_1$. Find the numerical value of $p_1 (\sqrt{1 - (\pi/4)^2})$.
+
+\singlespacing
+
+% To find the marginal distribution \( P_1(x) \) of the uniform distribution on the quarter disc \( D \), we need to integrate out the \( y \) variable. The quarter disc is defined as:
+
+% \[ D = \{(x, y) : x^2 + y^2 < 1, x > 0, y > 0\} \]
+
+% The uniform distribution on this quarter disc means that the probability density function (pdf) is constant over \( D \) and zero elsewhere. To find this constant, we need to ensure that the total probability over \( D \) is 1. The area of \( D \) is \( \frac{1}{4}\pi \), so the pdf \( p(x, y) \) is:
+
+% \[ p(x, y) = \frac{4}{\pi} \quad \text{for } (x, y) \in D \]
+
+% Now, to find the marginal distribution \( P_1(x) \), we integrate out \( y \):
+
+% \[ P_1(x) = \int_{-\infty}^{\infty} p(x, y) \, dy \]
+
+% Since \( p(x, y) \) is zero outside of \( D \), we only need to integrate over the values of \( y \) that correspond to a given \( x \) in \( D \). For a given \( x \) in \( D \), \( y \) ranges from 0 to \( \sqrt{1 - x^2} \). So the integral becomes:
+
+% \[ P_1(x) = \int_{0}^{\sqrt{1 - x^2}} \frac{4}{\pi} \, dy = \frac{4}{\pi} \sqrt{1 - x^2} \]
+
+% This is the probability density function \( p_1(x) \) of the marginal distribution.
+
+% The distribution function \( F_1(x) \) is found by integrating the pdf:
+
+% \[ F_1(x) = \int_{-\infty}^{x} p_1(t) \, dt \]
+
+% Again, since \( p_1(x) \) is zero outside of \( D \), we only need to integrate from 0 to \( x \):
+
+% \[ F_1(x) = \int_{0}^{x} \frac{4}{\pi} \sqrt{1 - t^2} \, dt \]
+
+% Now, to find the numerical value of \( p_1(\sqrt{1 - (\pi/4)^2}) \), we substitute \( x = \sqrt{1 - (\pi/4)^2} \) into \( p_1(x) \):
+
+% \[ p_1\left(\sqrt{1 - \left(\frac{\pi}{4}\right)^2}\right) = \frac{4}{\pi} \sqrt{1 - \left(1 - \left(\frac{\pi}{4}\right)^2\right)} = \frac{4}{\pi} \cdot \frac{\pi}{4} = 1 \]
+
+% So, \( p_1(\sqrt{1 - (\pi/4)^2}) = 1 \).
