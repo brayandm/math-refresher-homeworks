@@ -203,11 +203,49 @@ We have that:
 
 \singlespacing
 
-We need to find $F_1(2b)F_2(\text{ln}\; 2/\lambda)$:
+We need to find $F_1(2b)F_2(\frac{\text{ln}(2)}{\lambda})$:
+
+\singlespacing
+\singlespacing
+
+We have three cases for $F_1(2b)$:
 
 \singlespacing
 
-We have three cases:
+\begin{enumerate}
+    \item $2b < a$
+    \item $a \leq 2b \leq b$
+    \item $2b > b$
+\end{enumerate}
+
+\singlespacing
+
+\textbf{Case 1:} $2b < a$
+
+\singlespacing
+
+In this case $F_1(2b) = 0$
+
+\singlespacing
+
+\textbf{Case 2:} $a \leq 2b \leq b$
+
+\singlespacing
+
+In this case $F_1(2b) = \frac{2b - a}{b-a}$
+
+\singlespacing
+
+\textbf{Case 3:} $2b > b$
+
+\singlespacing
+
+In this case $F_1(2b) = 1$
+
+\singlespacing
+\singlespacing
+
+We have three cases for $F_2(\frac{\text{ln}(2)}{\lambda})$:
 
 \singlespacing
 
@@ -223,14 +261,7 @@ We have three cases:
 
 \singlespacing
 
-In this case $F_2(\text{ln}\; 2/\lambda) = 0$, because $\text{ln}\; 2/\lambda < 0$,
-and also $F_1(2b) = 1$ because $2b > b$:
-
-\singlespacing
-
-\begin{equation}
-    F_1(2b)F_2(\text{ln}\; 2/\lambda) = F_1(2b)F_2(\text{ln}\; 2/\lambda) = 1 * 0 = 0
-\end{equation}
+In this case $F_2(\frac{\text{ln}(2)}{\lambda}) = 0$, because $\frac{\text{ln}(2)}{\lambda} < 0$
 
 \singlespacing
 
@@ -238,7 +269,7 @@ and also $F_1(2b) = 1$ because $2b > b$:
 
 \singlespacing
 
-In this case $\text{ln}\; 2/\lambda$ is undefined, so $F_2(\text{ln}\; 2/\lambda)$ is undefined
+In this case $F_2(\frac{\text{ln}(2)}{\lambda})$ is \textbf{undefined}, because $\frac{\text{ln}(2)}{\lambda} = \frac{\text{ln}(2)}{0}$ is \textbf{undefined}
 
 \singlespacing
 
@@ -246,11 +277,19 @@ In this case $\text{ln}\; 2/\lambda$ is undefined, so $F_2(\text{ln}\; 2/\lambda
 
 \singlespacing
 
-In this case $F_2(\text{ln}\; 2/\lambda) = 1 - e^{-\lambda \text{ln}\; 2/\lambda} = 1 - e^{-\text{ln}\; 2} = 1 - \frac{1}{2} = \frac{1}{2}$,
-and also $F_1(2b) = 1$ because $2b > b$:
+In this case $F_2(\frac{\text{ln}(2)}{\lambda}) = 1 - e^{-\lambda \frac{\text{ln}(2)}{\lambda}} = 1 - e^{-\text{ln}(2)} = 1 - \frac{1}{2} = \frac{1}{2}$
+
+\singlespacing
+
+So, $F_1(2b)F_2(\frac{\text{ln}(2)}{\lambda})$ is:
 
 \singlespacing
 
 \begin{equation}
-    F_1(2b)F_2(\text{ln}\; 2/\lambda) = F_1(2b)F_2(\text{ln}\; 2/\lambda) = 1 * \frac{1}{2} = \frac{1}{2}
+    F_1(2b)F_2(\frac{\text{ln}(2)}{\lambda}) = \begin{cases}
+        undefined                            & \lambda = 0                                           \\
+        0                                    & \text{if } 2b < a \text{ or } \lambda < 0 \text{ or } \\
+        \frac{2b - a}{b-a}\times \frac{1}{2} & \text{if } a \leq 2b \leq b \text{ and } \lambda > 0  \\
+        1\times \frac{1}{2}                  & \text{if } 2b > b \text{ and } \lambda > 0
+    \end{cases}
 \end{equation}
