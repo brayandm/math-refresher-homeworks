@@ -1,1 +1,97 @@
 \textbf{Problem 1:}
+
+\singlespacing
+
+In this problem we have an unfair coin with probability of heads $p$
+and probability of tails $1-p$.
+
+\singlespacing
+
+To make a fair coin or a fair toss we can throw the unfair coin twice,
+so we have 4 possible outcomes:
+
+\singlespacing
+
+\begin{enumerate}
+    \item \textbf{HH} with probability equals to $p^2$
+    \item \textbf{HT} with probability equals to $p(1-p)$
+    \item \textbf{TH} with probability equals to $(1-p)p$
+    \item \textbf{TT} with probability equals to $(1-p)^2$
+\end{enumerate}
+
+\singlespacing
+
+And then because we have two outcomes with same probability \textbf{HT}
+and \textbf{TH}, then we can assign heads to \textbf{HT} and tails to
+\textbf{TH} and we have a fair coin. But there is a case when we get
+\textbf{HH} or \textbf{TT}, in that case we need to repeat the process
+until we get \textbf{HT} or \textbf{TH}.
+
+\singlespacing
+
+Let's define the toss of this two coins as a step, so our problem is to calculate
+the expected number of steps to get \textbf{HT} or \textbf{TH}.
+
+\singlespacing
+
+We know the probability of getting \textbf{HT} or \textbf{TH} in one step, that
+is $p(1-p) + (1-p)p = 2p(1-p)$. And we know that the probability of getting
+\textbf{HH} or \textbf{TT} in one step is $p^2 + (1-p)^2$.
+
+\singlespacing
+
+In each step we have a probability of $2p(1-p)$ of getting \textbf{HT} or
+\textbf{TH} and then we finish the process, and a probability of $p^2 + (1-p)^2$
+of getting \textbf{HH} or \textbf{TT} and then we need to repeat the same process.
+So defining $X$ as the number of steps to get \textbf{HT} or \textbf{TH}, we have:
+
+\singlespacing
+
+\begin{equation}
+    E[X] = 1 + 2p(1-p) \cdot 0 + (p^2 + (1-p)^2)\cdot E[X]
+\end{equation}
+
+\singlespacing
+
+Let's analyze the equation above, we have add $1$ because we always do the first step,
+then we have $2p(1-p) \cdot 0$ because if we get \textbf{HT} or \textbf{TH} in the first
+step we don't need to repeat the process anymore so we have $0$ steps, and then we have
+$(p^2 + (1-p)^2)\cdot E[X]$ because if we get \textbf{HH} or \textbf{TT} in the first
+step we need to repeat the process (because the process start again and it is the same
+problem, we just need to multiply the expected number of steps by the probability of
+getting \textbf{HH} or \textbf{TT} in one step, so the expected number of steps
+depends on itself).
+
+\singlespacing
+
+Solving the equation above we have:
+
+\singlespacing
+
+\begin{equation}
+    E[X] = 1 + 2p(1-p) \cdot 0 + (p^2 + (1-p)^2)\cdot E[X]
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    E[X] = 1 + (p^2 + (1-p)^2)\cdot E[X]
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    E[X] - (p^2 + (1-p)^2)\cdot E[X] = 1
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    E[X] \cdot (1 - (p^2 + (1-p)^2)) = 1
+\end{equation}
+
+\singlespacing
+
+\begin{equation}
+    E[X] = \frac{1}{1 - (p^2 + (1-p)^2)}
+\end{equation}
